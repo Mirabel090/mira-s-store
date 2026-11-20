@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Dashboard | MiraStore Admin</title>
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <header class="admin-topbar">
+    <div class="container admin-topbar-inner">
+      <a href="dashboard.html" class="logo">Oakline <small>Admin</small></a>
+      <div class="admin-topbar-actions">
+        <a href="dashboard.html">Products</a>
+        <a href="orders.html" id="orders-link">Orders</a>
+        <a href="../index.html" target="_blank" rel="noopener">View store</a>
+        <a href="change-password.html">Change password</a>
+        <button type="button" class="btn btn-light btn-sm" id="logout-btn">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container admin-main">
+
+    <div class="admin-heading">
+      <h1>Products</h1>
+      <a href="add-product.html" class="btn btn-primary">+ Add Product</a>
+    </div>
+
+    <div id="dashboard-message"></div>
+
+    <div class="stats">
+      <div class="stat-card"><span>Total products</span><strong id="stat-total">0</strong></div>
+      <div class="stat-card"><span>Categories</span><strong id="stat-categories">0</strong></div>
+      <div class="stat-card"><span>Featured</span><strong id="stat-featured">0</strong></div>
+      <a href="orders.html?status=new" class="stat-card" id="stat-new-card">
+        <span>New orders</span><strong id="stat-new-orders">0</strong>
+      </a>
+    </div>
+
+    <div class="table-wrap">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Featured</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="product-rows">
+          <tr><td colspan="6" class="text-center">Loading products...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <!-- main.js gives us getProducts, formatPrice, escapeHTML -->
+  <script src="../js/main.js"></script>
+  <script src="../js/admin-api.js"></script>
+  <script src="../js/admin-dashboard.js"></script>
+</body>
+</html>

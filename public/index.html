@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiraStore Furniture | Modern Furniture for Every Home</title>
+  <meta name="description" content="Shop sleek, high-quality furniture for your living room, bedroom and office." />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Mira's Funiture</a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="shop.html?category=Sofas">Sofas</a>
+        <a href="shop.html?category=Beds">Beds</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-link">
+          Cart <span class="cart-count" id="cart-count">0</span>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <span class="hero-tag">New Collection</span>
+          <h1>Furniture that makes a house feel like home</h1>
+          <p>Handcrafted, durable and beautifully designed pieces for every room. Delivered to your door.</p>
+          <div class="hero-buttons">
+            <a href="shop.html" class="btn btn-primary">Shop Now</a>
+            <a href="#categories" class="btn btn-outline">Browse Categories</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="./img/“Luxury Living Room Inspiration ✨ Gray + Gold Perfection”.jpeg" alt="Modern living room with a sofa" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CATEGORIES ===== -->
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-title">
+          <h2>Shop by Category</h2>
+          <p>Find the perfect piece for every space</p>
+        </div>
+
+        <div class="grid grid-categories">
+          <a href="shop.html?category=Sofas" class="category-card">
+            <img src="./img/Lilly L Shape Sofa Sale Live Now.jpeg" alt="Sofas" />
+            <span>Sofas</span>
+          </a>
+          <a href="shop.html?category=Beds" class="category-card">
+            <img src="./img/b4b7c542-3791-416e-be94-84e13011a402.jpeg" alt="Beds" />
+            <span>Beds</span>
+          </a>
+          <a href="shop.html?category=Tables" class="category-card">
+            <img src="./img/bbbe6dda-d396-4068-814d-055f4e5aaf38.jpeg" alt="Tables" />
+            <span>Tables</span>
+          </a>
+          <a href="shop.html?category=Chairs" class="category-card">
+            <img src="./img/🪑 Accent Chair Designs – Perfect for Every Stylish Home 🏡.jpeg" alt="Chairs" />
+            <span>Chairs</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURED PRODUCTS ===== -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured Products</h2>
+          <p>Our most loved pieces right now</p>
+        </div>
+
+        <!-- Filled in by main.js -->
+        <div class="grid grid-products" id="featured-products"></div>
+
+        <div class="section-cta">
+          <a href="shop.html" class="btn btn-outline">View All Products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="features">
+      <div class="container grid grid-features">
+        <div class="feature">
+          <h3>Fast Delivery</h3>
+          <p>Reliable delivery straight to your home.</p>
+        </div>
+        <div class="feature">
+          <h3>Quality Guaranteed</h3>
+          <p>Solid materials built to last for years.</p>
+        </div>
+        <div class="feature">
+          <h3>Easy Support</h3>
+          <p>Our team is always ready to help.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo" style="color:#fff;">Mira's Funiture</a>
+        <p class="mt-1">Modern, comfortable furniture for modern living.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Products</a></li>
+          <li><a href="shop.html?category=Sofas">Sofas</a></li>
+          <li><a href="shop.html?category=Beds">Beds</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="admin/login.html">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> Mira's Furniture. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Orders | Oakline Admin</title>
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <header class="admin-topbar">
+    <div class="container admin-topbar-inner">
+      <a href="dashboard.html" class="logo">Oakline <small>Admin</small></a>
+      <div class="admin-topbar-actions">
+        <a href="dashboard.html">Products</a>
+        <a href="orders.html">Orders</a>
+        <a href="../index.html" target="_blank" rel="noopener">View store</a>
+        <a href="change-password.html">Change password</a>
+        <button type="button" class="btn btn-light btn-sm" id="logout-btn">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container admin-main">
+
+    <div class="admin-heading">
+      <h1>Orders</h1>
+      <button type="button" class="btn btn-outline btn-sm" id="refresh-btn">Refresh</button>
+    </div>
+
+    <div id="orders-message"></div>
+
+    <!-- Status buttons (built by admin-orders.js) -->
+    <div class="category-filters admin-filters" id="status-filters"></div>
+
+    <div class="table-wrap">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Reference</th>
+            <th>Customer</th>
+            <th>Phone</th>
+            <th>Items</th>
+            <th>Total</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="order-rows">
+          <tr><td colspan="8" class="text-center">Loading orders...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <!-- Order details popup (filled by admin-orders.js) -->
+  <div class="modal hidden" id="order-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box" id="modal-content"></div>
+  </div>
+
+  <!-- Order matters: main.js, then admin-api.js, then this page's script -->
+  <script src="../js/main.js"></script>
+  <script src="../js/admin-api.js"></script>
+  <script src="../js/admin-orders.js"></script>
+</body>
+</html>

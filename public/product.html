@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Product | Mira's Furniture</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Mira</a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="shop.html?category=Sofas">Sofas</a>
+        <a href="shop.html?category=Beds">Beds</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-link">
+          Cart <span class="cart-count" id="cart-count">0</span>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== PRODUCT (built by product.js) ===== -->
+    <section class="section">
+      <div class="container" id="product-container">
+        <p class="empty-state text-center">Loading product...</p>
+      </div>
+    </section>
+
+    <!-- ===== RELATED PRODUCTS ===== -->
+    <section class="section related-section hidden" id="related-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>You May Also Like</h2>
+        </div>
+        <div class="grid grid-products" id="related-products"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo" style="color:#fff;">MiraStore</a>
+        <p class="mt-1">Modern, comfortable furniture for modern living.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Products</a></li>
+          <li><a href="shop.html?category=Sofas">Sofas</a></li>
+          <li><a href="shop.html?category=Beds">Beds</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="admin/login.html">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> Mira's Furniture. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>
